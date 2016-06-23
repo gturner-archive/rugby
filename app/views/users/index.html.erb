@@ -1,13 +1,11 @@
-<h1>Listing Users</h1>
+<h1 class="center">Listing Users</h1>
  
-<tr>
-  <th>Title</th>
-  <th>Text</th>
-</tr>
 
-<% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.text %></td>
-  </tr>
+<% @users.each do |user| %>
+  <h4><%= user.name %></h3>
+  <ul class="list-unstyled">
+    <li><strong>Email: </strong><%= user.email %></li>
+    <li><strong>Team: </strong><%= user.team %></li>
+    <li><strong>ID: </strong><%= user.id %></li>
+  </ul>
 <% end %>
