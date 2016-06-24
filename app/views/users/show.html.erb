@@ -50,7 +50,7 @@
           <% @post.each do |post| %>
           <ol class="posts">
             <li id="post-<%= post.id %>">
-              <span class="user"><%= link_to post.user.name, post.user %></span>
+              <span class="user"><%= link_to post.user.name, '#' %></span>
               <span class="content"><%= post.content %></span>
               <span class="content"><strong><%= post.question_id %></strong></span>
               <span class="team"><%= post.team %></span>

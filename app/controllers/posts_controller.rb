@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   
   def create
     @post = current_user.posts.build(post_params)
+    @post.team = current_user.team
     @post.save
     redirect_to current_user
   end

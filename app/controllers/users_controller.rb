@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @post = Post.where('user_id' == params[:id])
+    @post = Post.find_by_sql("SELECT 'posts'.* FROM 'posts' WHERE team = '#{@user[:team]}'")
   end
 
   def new
